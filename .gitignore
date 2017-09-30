@@ -1,0 +1,21 @@
+*.exe
+*.o
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Windows Folder config file
+*.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows shortcuts
+*.lnk
+
+# vim swap file
+*.swp
+
+# vim backup file
+*.*~
