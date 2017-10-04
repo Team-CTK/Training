@@ -1,4 +1,4 @@
-#include<cstdio>
+ #include<cstdio>
 #include<iostream>
 #include<cstring>
 #include<string>
@@ -45,15 +45,26 @@ int Read() {
     return x * F;
 }
 // C
+int a[maxn];
 int main()
 {
-    int t; cin >> t;
-    while(t--){
-        ll a,b,c;
-        cin >> a >> b >> c;
-        cout << a/30*c+b*a << endl;
-        
+    int n,k;
+    cin >> n >> k;
+    for(int i = 0;i<n;i++){
+        a[i] = Read();
     }
+    int res = 1;
+    if(n<=k){
+        //res = 1;
+        cout << res << endl;
+        return 0;
+    }
+    int tmp = k;
+    for(int i=tmp;i<n;i++){
+        if((i-k)>=0&&a[i]-a[i-k]<1000){
+            res++;
+            tmp = res*k;
+        }
+    }
+    cout << res << endl;
 }
-
-
