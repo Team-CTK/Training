@@ -45,9 +45,9 @@ inline ll Read(){
     while(ch>='0'&&ch<='9'){x=x*10+ch-'0';ch=getchar();}
     return x*f;
 }
-bool is_prime[maxn*10];
-int pid[maxn*10];
-int prime1[maxn*10];
+bool is_prime[maxn*5];
+int pid[maxn*5];
+int prime1[maxn*5];
 int num;
 int vis[maxn];
 std::vector<int> G[maxn];

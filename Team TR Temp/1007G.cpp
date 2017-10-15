@@ -3,6 +3,7 @@
 #include<cstring>
 #include<string>
 #include<algorithm>
+#include<set>
 #include<map>
 #include<cmath>
 #include<vector>
@@ -26,7 +27,7 @@
 #define rep(a,b,c) for(int (a)=(b);(a)<(c);(a)++)
 #define drep(a,b,c) for(int (a)=(b);(a)>(c);--(a))
 #define dbg(x) cout << #x << "=" << x << endl
-#define _ixvii0iv
+#define endl '\n'
 using namespace std;
 const int maxn = 1e5+5;
 typedef long long ll;
@@ -38,17 +39,18 @@ ll mul(ll x,ll y){return x*y%mod;}
 ll q_mul(ll a, ll b){ ll ans = 0;while(b){if(b & 1){ans=(ans+a)%mod;} b>>=1;a=(a+a) % mod;}return ans;}
 ll q_pow(ll x , ll y){ll res=1;while(y){if(y&1) res=q_mul(res,x) ; y>>=1 ; x=q_mul(x,x);} return res;}
 ll inv(ll x) { return q_pow(x, mod-2); }
-int Read() {
-    int x = 0, F = 1; char C = getchar();
-    while (C < '0' || C > '9') { if (C == '-') F = -F; C = getchar(); }
-    while (C >= '0' && C <= '9') { x = x * 10 - '0' + C, C = getchar(); }
-    return x * F;
-
+inline ll Read(){
+    ll x=0,f=1;char ch=getchar();
+    while(ch<'0'||ch>'9'){if(ch=='-')f=-1;ch=getchar();}
+    while(ch>='0'&&ch<='9'){x=x*10+ch-'0';ch=getchar();}
+    return x*f;
+}
+void solve(){
+    /*show me your code*/
 }
 int main(){
-
-    #ifndef ONLINE_JUDGE
-        FILEIN;
-    #endif
-
+    int t = Read();
+    int ca = 1;
+    while(t--) solve();
+    return 0;
 }
